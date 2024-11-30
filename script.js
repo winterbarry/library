@@ -30,4 +30,33 @@ console.log(myLibrary)
 
 for (let i = 0; i < myLibrary.length; i++) {
     console.log(myLibrary[i].info());
-  }
+}
+
+const newBookBtn = document.getElementById('newBookButton');
+const bookForm = document.getElementById('bookForm');
+
+newBookBtn.addEventListener('click', () => {
+    bookForm.classList.toggle('hidden');
+});
+
+bookForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const author = document.getElementById('author').value;
+    const title = document.getElementById('title').value;
+    const pages = parseInt(document.getElementById('pages').value, 10);
+    const readStatus = document.getElementById('readStatus').value.toLowerCase() === "yes";
+
+    if (!author || !title || isNaN(pages)) {
+        alert("Please fill in all fields correctly.");
+        return;
+    }
+
+    const newBook = new Book(title, author, pages, readStatus);
+
+    addBookToLibrary(newBook);
+
+    console.log(myLibrary);
+
+    bookForm.reset();
+});

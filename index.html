@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <form action="#" method="post" class="hidden" id="bookForm">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" placeholder="Author's name required">
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Book title required">
+
+        <label for="pages">Pages:</label>
+        <input type="number" id="pages" name="pages" placeholder="Page count required">
+
+        <label for="readStatus">readStatus:</label>
+        <input type="text" id="readStatus" name="readStatus" placeholder="Have you read this?">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="newBookButton">New Book</button>
+
     <script src="script.js"></script>
 </body>
 </html>
