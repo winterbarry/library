@@ -35,3 +35,27 @@ button:hover {
 .hidden {
     display: none;
 }
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    text-align: left;
+    /* border-collapse: collapse; */
+}
+
+.remove-button {
+    background-color: #f44336;
+    color: "white";
+    border: "none";
+    padding: "0.5em";
+    cursor: "pointer";
+}
+
+.toggle-button {
+    background-color: #008CBA;
+    color: "white";
+    border: "none";
+    margin-left: "0.5em";
+    padding: "0.5em";
+    cursor: "pointer";
+}
